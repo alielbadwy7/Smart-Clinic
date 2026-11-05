@@ -4,18 +4,20 @@ A Python-based desktop application for managing clinic operations using Object-O
 
 ## Project Overview
 
-SmartClinic helps organize essential clinic operations through a simple graphical user interface. It supports patient and doctor management, appointment scheduling, medical records, payment tracking, and a dashboard for monitoring clinic statistics.
+SmartClinic is a desktop application designed to manage essential clinic operations through a simple graphical user interface.
 
-## Features
+The system helps organize patient information, doctor details, appointments, medical records, and payments. It also provides a dashboard to monitor clinic statistics and recorded revenue.
+
+## Key Features
 
 - **Patient Management:** Add and manage patient information.
 - **Doctor Management:** Store doctor details and specializations.
 - **Appointment Management:** Book, cancel, and complete appointments.
-- **Medical Records:** Store diagnoses, visit notes, and medical attachments (PDF, JPG, JPEG, PNG).
-- **Payment Management:** Track payments and payment methods.
+- **Medical Records:** Record patient diagnoses, visit notes, and attach medical files (PDF, JPG, JPEG, PNG).
+- **Payment Management:** Track patient payments and payment methods.
 - **Dashboard:** Display clinic statistics and total recorded revenue.
-- **Automatic ID Generation:** Generate unique IDs for patients, doctors, appointments, records, and payments.
-- **Data Persistence:** Store and retrieve information using JSON files.
+- **Automatic ID Generation:** Generate unique IDs for patients, doctors, appointments, medical records, and payments.
+- **Data Persistence:** Store and retrieve data using JSON files.
 - **Input Validation:** Handle invalid inputs and prevent duplicate records.
 
 ## Technologies Used
@@ -26,12 +28,33 @@ SmartClinic helps organize essential clinic operations through a simple graphica
 - JSON (Data Storage)
 - Unittest (Testing)
 
+## Project Structure
+
+```text
+SmartClinic/
+├── main.py
+├── models.py
+├── clinic.py
+├── file_manager.py
+├── dashboard.py
+├── gui.py
+├── data/
+│   └── medical_files/
+├── tests/
+│   └── test_clinic.py
+├── ScreenShots/
+├── .gitignore
+└── README.md
+```
+
 ## Screenshots
 
 ### Main Application
-![SmartClinic Screenshot 1](ScreenShots/Screenshot%202026-11-05%20173141.png)
+
+![SmartClinic Main Screen](ScreenShots/Screenshot%202026-11-05%20173141.png)
 
 ### Application Features
+
 ![SmartClinic Screenshot 2](ScreenShots/Screenshot%202026-11-05%20173203.png)
 
 ![SmartClinic Screenshot 3](ScreenShots/Screenshot%202026-11-05%20173221.png)
@@ -42,26 +65,9 @@ SmartClinic helps organize essential clinic operations through a simple graphica
 
 ![SmartClinic Screenshot 6](ScreenShots/Screenshot%202026-11-05%20173311.png)
 
-## Project Structure
+## OOP Concepts
 
-```text
-SmartClinic/
-│
-├── main.py
-├── models.py
-├── clinic.py
-├── file_manager.py
-├── dashboard.py
-├── gui.py
-├── tests/
-│   └── test_clinic.py
-├── ScreenShots/
-├── data/
-├── .gitignore
-└── README.md
-```
-
-## OOP Concepts Applied
+The project applies core Object-Oriented Programming concepts, including:
 
 - Classes and Objects
 - Constructors
@@ -81,7 +87,7 @@ SmartClinic/
 git clone https://github.com/alielbadwy7/Smart-Clinic.git
 ```
 
-2. Navigate to the project folder:
+2. Navigate to the project directory:
 
 ```bash
 cd Smart-Clinic
@@ -97,9 +103,9 @@ python main.py
 
 The project includes unit tests using Python's built-in `unittest` framework.
 
-**Latest test result:** 10 tests passed successfully.
+**Test Results:** 10 tests passed successfully.
 
-Run the tests using:
+Run tests using:
 
 ```bash
 python -m unittest discover -s tests -v
@@ -107,7 +113,9 @@ python -m unittest discover -s tests -v
 
 ## Data Storage
 
-The application uses JSON files for local data storage. Medical attachments are stored locally in `data/medical_files/`.
+The application uses JSON files for local data storage. Medical attachments are stored in the `data/medical_files/` directory.
+
+Sensitive local data files are excluded from version control using `.gitignore`.
 
 ## Project Purpose
 
